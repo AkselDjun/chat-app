@@ -1,5 +1,5 @@
 .App {
-  padding: 24px;
+  padding: 5px;
 }
 
 .App-logo {
@@ -55,13 +55,6 @@
 .flex-container {
   display: flex;
   align-items: center;
-}
-
-.thumbnail {
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  margin-right: 16px;
 }
 
 .list-group-item {

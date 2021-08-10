@@ -12,9 +12,29 @@ let imageWindow;
 let settingsWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680, webPreferences: { webSecurity: false}});
-  imageWindow = new BrowserWindow({width: 600, height: 600, parent: mainWindow, show: false});
-  settingsWindow = new BrowserWindow({width: 600, height: 600, parent: mainWindow, show: false});
+  mainWindow = new BrowserWindow({
+    width: 900, 
+    height: 600,
+    autoHideMenuBar: true,
+    webPreferences: { 
+      webSecurity: false
+  }});
+
+  imageWindow = new BrowserWindow({
+    width: 600, 
+    height: 600,
+    autoHideMenuBar: true,
+    parent: mainWindow, 
+    show: false
+  });
+
+  settingsWindow = new BrowserWindow({
+    width: 600, 
+    height: 600,
+    autoHideMenuBar: true,
+    parent: mainWindow, 
+    show: false
+  });
 
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
   imageWindow.loadURL(isDev ? 'http://localhost:3000/image' : `file://${path.join(__dirname, '../build/index.html')}`);
@@ -30,7 +50,7 @@ function createWindow() {
 
   settingsWindow.on('close', (e) => {
     e.preventDefault();
-    settingsWindow.hide();
+    settingsWindow.hide(null);
   });
 }
 
