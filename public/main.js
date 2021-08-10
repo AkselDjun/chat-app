@@ -21,7 +21,7 @@ function createWindow() {
   }});
 
   imageWindow = new BrowserWindow({
-    width: 600, 
+    width: 700, 
     height: 600,
     autoHideMenuBar: true,
     parent: mainWindow, 
@@ -29,7 +29,7 @@ function createWindow() {
   });
 
   settingsWindow = new BrowserWindow({
-    width: 600, 
+    width: 700, 
     height: 600,
     autoHideMenuBar: true,
     parent: mainWindow, 
